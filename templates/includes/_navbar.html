@@ -16,7 +16,7 @@
                   <a class="nav-link" href="/articles">Articles</a>
               </li>
           </ul>
-          <div class="d-flex">
+          <!-- <div class="d-flex">
             {% if session.logged_in %}
                 <button class="btn btn-light ms-3"><a href="/dashboard">Dashboard</a></button>
                 <button class="btn btn-light ms-3"><a href="/logout">Logout</a></button>
@@ -24,7 +24,24 @@
                 <button class="btn btn-light ms-3"><a href="/login">Login</a></button>
                 <button class="btn btn-light ms-3"><a href="/register">Register</a></button>
             {% endif %}
-          </div>
+          </div> -->
+          <ul class="navbar-nav d-flex">
+            {% if session.logged_in %}
+            <li class="nav-item">
+                <a class="nav-link active" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/logout">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Register">Register</a>
+            </li>
+            {% endif %}
+        </ul>
       </div>
   </div>
 </nav>
